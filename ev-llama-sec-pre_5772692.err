@@ -1,0 +1,48 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.76s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.71s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.87s/it]
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.79s/it]
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Traceback (most recent call last):
+  File "/data/user_data/hdahmani/SafeCoder/scripts/sec_eval.py", line 253, in <module>
+    main()
+  File "/data/user_data/hdahmani/SafeCoder/scripts/sec_eval.py", line 250, in main
+    eval_all(args, evaler, vul_types)
+  File "/data/user_data/hdahmani/SafeCoder/scripts/sec_eval.py", line 220, in eval_all
+    d = eval_scenario(args, evaler, vul_type, scenario)
+  File "/data/user_data/hdahmani/SafeCoder/scripts/sec_eval.py", line 157, in eval_scenario
+    output_srcs, non_parsed_srcs = evaler.sample(file_context, func_context, info)
+  File "/data/user_data/hdahmani/SafeCoder/safecoder/evaler.py", line 40, in sample
+    gen_output = self.model.generate(
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/transformers/generation/utils.py", line 2024, in generate
+    result = self._sample(
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/transformers/generation/utils.py", line 2982, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1189, in forward
+    outputs = self.model(
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1001, in forward
+    layer_outputs = decoder_layer(
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 734, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 419, in forward
+    key_states, value_states = past_key_value.update(key_states, value_states, self.layer_idx, cache_kwargs)
+  File "/home/hdahmani/miniconda3/envs/safe_coder/lib/python3.10/site-packages/transformers/cache_utils.py", line 383, in update
+    self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx], key_states], dim=-2)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 246.00 MiB (GPU 0; 47.40 GiB total capacity; 40.36 GiB already allocated; 72.69 MiB free; 47.01 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Traceback (most recent call last):
+  File "/data/user_data/hdahmani/SafeCoder/scripts/print_results.py", line 54, in <module>
+    main()
+  File "/data/user_data/hdahmani/SafeCoder/scripts/print_results.py", line 50, in main
+    e = SecEval(os.path.join(args.experiments_dir, 'sec_eval', args.eval_name), args.split, args.eval_type)
+  File "/data/user_data/hdahmani/SafeCoder/safecoder/metric.py", line 34, in __init__
+    with open(os.path.join(eval_dir, et, cwe, 'result.jsonl')) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../experiments/sec_eval/llama2-7b/trained-new/cwe-676/result.jsonl'

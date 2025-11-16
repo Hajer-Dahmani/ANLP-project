@@ -1,0 +1,53 @@
+11/04/2025 20:05:37 - INFO - root -   Training args Namespace(output_name='mistral-7b-standard', datasets=['lmsys'], pretrain_name='mistral-7b', loss_weight=1.0, sven=False, num_train_epochs=2, learning_rate=2e-05, max_num_tokens=1024, batch_size=1, grad_acc_steps=16, weight_decay=0.01, adam_epsilon=1e-08, warmup_steps=0, max_grad_norm=1.0, dropout=0.1, kl_loss_weight=0, exclude_neg=False, no_weights=False, lora=False, r=16, lora_alpha=32, lora_dropout=0.1, sampling_size=20, sampling_method='minority', cwes=['all'], langs=['all'], logging_steps=50, save_epochs=10, seed=2, data_dir='../data_train_val', model_dir='../trained/', output_dir='../trained/mistral-7b-standard', logger=<RootLogger root (INFO)>)
+11/04/2025 20:05:37 - INFO - root -   ***** Running training *****
+11/04/2025 20:05:37 - INFO - root -     Num samples = 16221
+11/04/2025 20:05:37 - INFO - root -     Num epoch = 2
+11/04/2025 20:05:37 - INFO - root -     Batch size= 1
+11/04/2025 20:05:37 - INFO - root -     Total batch size (w. accumulation) = 16
+11/04/2025 20:05:37 - INFO - root -     Gradient Accumulation steps = 16
+11/04/2025 20:05:37 - INFO - root -     Total optimization steps = 2026
+11/04/2025 20:05:37 - INFO - root -     Num val samples = 1803
+11/04/2025 20:05:37 - INFO - root -     Num parameters = 7241732096
+11/04/2025 20:05:37 - INFO - root -     Num trainable parameters = 7241732096
+11/04/2025 20:18:28 - INFO - root -   epochs: 1/2, steps: 50/2026, func: 0.463961, 2%: 8h 29m 42s          
+11/04/2025 20:31:21 - INFO - root -   epochs: 1/2, steps: 100/2026, func: 0.447407, 4%: 8h 16m 22s          
+11/04/2025 20:43:28 - INFO - root -   epochs: 1/2, steps: 150/2026, func: 0.431654, 7%: 7h 53m 0s          
+11/04/2025 20:56:12 - INFO - root -   epochs: 1/2, steps: 200/2026, func: 0.418433, 9%: 7h 41m 49s          
+11/04/2025 21:08:40 - INFO - root -   epochs: 1/2, steps: 250/2026, func: 0.402779, 12%: 7h 28m 1s          
+11/04/2025 21:21:25 - INFO - root -   epochs: 1/2, steps: 300/2026, func: 0.379775, 14%: 7h 16m 16s          
+11/04/2025 21:34:11 - INFO - root -   epochs: 1/2, steps: 350/2026, func: 0.367893, 17%: 7h 4m 12s          
+11/04/2025 21:46:59 - INFO - root -   epochs: 1/2, steps: 400/2026, func: 0.360434, 19%: 6h 52m 6s          
+11/04/2025 21:59:36 - INFO - root -   epochs: 1/2, steps: 450/2026, func: 0.357331, 22%: 6h 39m 26s          
+11/04/2025 22:12:04 - INFO - root -   epochs: 1/2, steps: 500/2026, func: 0.343841, 24%: 6h 26m 6s          
+11/04/2025 22:24:49 - INFO - root -   epochs: 1/2, steps: 550/2026, func: 0.339385, 27%: 6h 13m 38s          
+11/04/2025 22:37:30 - INFO - root -   epochs: 1/2, steps: 600/2026, func: 0.337386, 29%: 6h 1m 13s          
+11/04/2025 22:50:38 - INFO - root -   epochs: 1/2, steps: 650/2026, func: 0.333411, 32%: 5h 49m 41s          
+11/04/2025 23:03:13 - INFO - root -   epochs: 1/2, steps: 700/2026, func: 0.324702, 34%: 5h 36m 39s          
+11/04/2025 23:15:40 - INFO - root -   epochs: 1/2, steps: 750/2026, func: 0.317991, 36%: 5h 23m 39s          
+11/04/2025 23:28:08 - INFO - root -   epochs: 1/2, steps: 800/2026, func: 0.314671, 39%: 5h 10m 35s          
+11/04/2025 23:41:01 - INFO - root -   epochs: 1/2, steps: 850/2026, func: 0.315135, 41%: 4h 58m 12s          
+11/04/2025 23:53:31 - INFO - root -   epochs: 1/2, steps: 900/2026, func: 0.309524, 44%: 4h 45m 21s          
+11/05/2025 00:06:21 - INFO - root -   epochs: 1/2, steps: 950/2026, func: 0.307176, 46%: 4h 32m 55s          
+11/05/2025 00:18:42 - INFO - root -   epochs: 1/2, steps: 1000/2026, func: 0.303385, 49%: 4h 19m 54s          
+11/05/2025 00:31:41 - INFO - root -   epochs: 2/2, steps: 1050/2026, func: 0.302326, 51%: 4h 7m 30s          
+11/05/2025 00:44:55 - INFO - root -   epochs: 2/2, steps: 1100/2026, func: 0.301205, 54%: 3h 55m 20s          
+11/05/2025 00:57:32 - INFO - root -   epochs: 2/2, steps: 1150/2026, func: 0.294363, 56%: 3h 42m 35s          
+11/05/2025 01:10:23 - INFO - root -   epochs: 2/2, steps: 1200/2026, func: 0.295201, 59%: 3h 30m 1s          
+11/05/2025 01:23:15 - INFO - root -   epochs: 2/2, steps: 1250/2026, func: 0.295679, 61%: 3h 17m 25s          
+11/05/2025 01:36:10 - INFO - root -   epochs: 2/2, steps: 1300/2026, func: 0.289697, 64%: 3h 4m 52s          
+11/05/2025 01:49:09 - INFO - root -   epochs: 2/2, steps: 1350/2026, func: 0.289744, 66%: 2h 52m 15s          
+11/05/2025 02:01:49 - INFO - root -   epochs: 2/2, steps: 1400/2026, func: 0.288029, 69%: 2h 39m 31s          
+11/05/2025 02:14:25 - INFO - root -   epochs: 2/2, steps: 1450/2026, func: 0.280159, 71%: 2h 26m 44s          
+11/05/2025 02:26:43 - INFO - root -   epochs: 2/2, steps: 1500/2026, func: 0.273025, 73%: 2h 13m 53s          
+11/05/2025 02:39:32 - INFO - root -   epochs: 2/2, steps: 1550/2026, func: 0.281377, 76%: 2h 1m 13s          
+11/05/2025 02:52:06 - INFO - root -   epochs: 2/2, steps: 1600/2026, func: 0.280904, 78%: 1h 48m 28s          
+11/05/2025 03:04:32 - INFO - root -   epochs: 2/2, steps: 1650/2026, func: 0.268952, 81%: 1h 35m 42s          
+11/05/2025 03:17:03 - INFO - root -   epochs: 2/2, steps: 1700/2026, func: 0.267479, 83%: 1h 22m 59s          
+11/05/2025 03:29:41 - INFO - root -   epochs: 2/2, steps: 1750/2026, func: 0.274148, 86%: 1h 10m 17s          
+11/05/2025 03:42:18 - INFO - root -   epochs: 2/2, steps: 1800/2026, func: 0.272167, 88%: 0h 57m 35s          
+11/05/2025 03:54:55 - INFO - root -   epochs: 2/2, steps: 1850/2026, func: 0.263411, 91%: 0h 44m 54s          
+11/05/2025 04:07:35 - INFO - root -   epochs: 2/2, steps: 1900/2026, func: 0.265879, 93%: 0h 32m 13s          
+11/05/2025 04:20:12 - INFO - root -   epochs: 2/2, steps: 1950/2026, func: 0.26155, 96%: 0h 19m 31s          
+11/05/2025 04:32:55 - INFO - root -   epochs: 2/2, steps: 2000/2026, func: 0.270894, 98%: 0h 6m 50s          
+11/05/2025 04:48:36 - INFO - root -   final eval loss: func: 0.264317
+11/05/2025 04:48:36 - INFO - root -   Saving model checkpoint to ../trained/mistral-7b-standard/checkpoint-last
